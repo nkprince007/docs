@@ -1,0 +1,11 @@
+[build]
+    publish = "static"
+
+[[redirects]]
+    from = "/"
+    to = "https://naveen.cloud"
+    status = 301
+    force = true
+
+    [redirects.headers]
+        X-From = "contributions.naveen.cloud"
