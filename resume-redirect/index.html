@@ -4,7 +4,7 @@
 <head>
     <title>Naveen Resume</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="5; URL=https://contributions.naveenkumarsangi.me/resume.pdf" />
+    <meta http-equiv="refresh" content="4; URL=https://contributions.naveenkumarsangi.me/resume.pdf" />
 </head>
 
 <body>
@@ -15,9 +15,12 @@
         const maxSeconds = 5;
         const p = document.getElementById('redirect');
         let count = 0;
-        setInterval(() => {
+        const id = setInterval(() => {
             count += 1;
             const left = maxSeconds - count;
+            if (left == 0) {
+                clearInterval(id);
+            }
             const text = `This page has been moved.
 If you are not redirected within ${left} seconds, click <a href="https://contributions.naveenkumarsangi.me/resume.pdf">here</a>
 to go to Resume page.`;
