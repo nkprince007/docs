@@ -1,0 +1,47 @@
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%====================
+% File:         resume.tex
+% Editor:       https://github.com/TimmyChan 
+%               https://www.linkedin.com/in/timmy-l-chan/
+% Last Updated: Jan 7th, 2022
+% Notes:        All formatting is done in TLCresume.sty
+%               No need to touch that file. 
+%               All actual content is in the sections/ folder.
+%====================
+
+\usepackage{TLCresume}
+
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Naveen Kumar} % Name Here
+\def\phone{+91 8670300541}
+\def\city{Bengaluru, Karnataka}
+\def\email{naveenkumarsangi@pm.me}
+\def\LinkedIn{naveenkumarsangi} % linkedin.com/in/______
+\def\github{nkprince007} % github username
+\def\role{Software Development Engineer III} % JOB TITLE
+
+\input{_header}
+\begin{document}
+% \input{sections/objective}
+
+\section{Skills}
+\input{sections/skills}
+
+\section{Experience}
+\input{sections/experience}
+
+\section{Education}
+\input{sections/education}
+
+% make a newpage wherever it is a clean break
+% \newpage
+
+\section{Activities}
+\input{sections/activities}
+
+
+\end{document}
