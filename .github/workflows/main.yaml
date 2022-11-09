@@ -3,8 +3,6 @@ name: Generate resume pdf
 on:
   push:
     branches: ["master"]
-  pull_request:
-    branches: ["master"]
 
 jobs:
   build:
@@ -16,3 +14,11 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: Build
         run: ./build.sh
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          github-comment: false
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: "--prod"
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
