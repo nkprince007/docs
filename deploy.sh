@@ -6,3 +6,4 @@ set -x -e -o pipefail
 
 echo "Deploying resume"
 vercel deploy static --prod
+vercel deploy resume-redirect --prod
