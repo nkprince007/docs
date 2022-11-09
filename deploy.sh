@@ -2,16 +2,7 @@
 
 set -x -e -o pipefail
 
-echo "Building resume"
-cd resume
-nix-shell --run "make clean"
-nix-shell --run "make"
-cd ..
+./build.sh
 
-echo "Copying resume into folder"
-outfile="resume-$(date "+%Y-%m-%d").pdf"
-cp resume/build/resume.pdf "static/resumes/$outfile"
-rm -f static/resume.pdf
-ln -s "resumes/$outfile" static/resume.pdf
-
+echo "Deploying resume"
 vercel deploy static --prod
