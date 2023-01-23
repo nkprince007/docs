@@ -9,7 +9,7 @@ nix-shell --run "make"
 cd ..
 
 echo "Copying resume into folder"
-outfile="resume-$(date "+%Y-%m-%d").pdf"
+outfile="resume-$(date "+%d-%b-%Y").pdf"
 cp resume/build/resume.pdf "static/resumes/$outfile"
 rm -f static/resume.pdf
 ln -s "resumes/$outfile" static/resume.pdf
