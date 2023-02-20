@@ -2,7 +2,7 @@
 
 set -x -e -o pipefail
 
-./build.sh
+bash build.sh
 
 echo "Deploying resume"
 vercel deploy static --prod
