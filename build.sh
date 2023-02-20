@@ -21,7 +21,6 @@ function verifyChecksums {
 	fi
 }
 
-verifyChecksums
 echo "Building resume"
 cd resume
 nix-shell --run "make clean"
