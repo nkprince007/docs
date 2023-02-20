@@ -5,7 +5,7 @@
 with pkgs;
 
 stdenv.mkDerivation {
-  name = "mydoc";
+  name = "resume";
   buildInputs = [
     (texlive.combine {
       inherit (texlive)
