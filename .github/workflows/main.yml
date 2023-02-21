@@ -26,5 +26,5 @@ jobs:
           working-directory: ./resume-redirect
           vercel-args: "--prod"
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-org-id: ${{ secrets.ORG_ID}} # Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} # Required
+          vercel-org-id: ${{ secrets.REDIRECT_ORG_ID}} # Required
+          vercel-project-id: ${{ secrets.REDIRECT_PROJECT_ID}} # Required
