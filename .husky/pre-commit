@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+./build.sh
+if git status --porcelain | grep '^\W.' | grep --quiet 'static/resumes/resume'; then
+    echo "working directory is dirty..."
+    echo "Please stage resume changes to continue with committing..."
+    git status --porcelain
+    exit 1
+fi
