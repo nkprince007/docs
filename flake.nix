@@ -55,7 +55,7 @@
 
         meta = with lib; {
           description = "My resume";
-          license = licenses.bsd3;
+          license = licenses.gpl3;
           platforms = platforms.linux;
         };
       };
