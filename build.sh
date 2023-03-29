@@ -21,7 +21,7 @@ function verifyChecksums {
 	fi
 }
 
-echo "Building resume"
+echo "Building resume.pdf"
 nix build .
 
 verifyChecksums
