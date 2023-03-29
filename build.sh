@@ -10,7 +10,7 @@ function verifyChecksums {
 	fi
 
 	set +e
-	curr=$("$checksumBinary" resume/build/resume.pdf | cut -d' ' -f1)
+	curr=$("$checksumBinary" result/share/resume.pdf | cut -d' ' -f1)
 	orig=$("$checksumBinary" static/resume.pdf | cut -d' ' -f1)
 	set -e
 
@@ -22,7 +22,7 @@ function verifyChecksums {
 }
 
 echo "Building resume"
-nix-build .
+nix build .
 
 verifyChecksums
 echo "Copying resume into folder"
