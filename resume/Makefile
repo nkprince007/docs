@@ -58,5 +58,5 @@ clean:
 	latexmk -CA
 
 install:
-	mkdir -pv ${out}/nix-support/
-	cp $(DOCNAME).pdf ${out}/
+	mkdir -pv ${out}/share/
+	install -Dm644 ./build/$(DOCNAME).pdf ${out}/share/$(DOCNAME).pdf

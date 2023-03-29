@@ -22,14 +22,10 @@ function verifyChecksums {
 }
 
 echo "Building resume"
-cd resume
-nix-shell --run "make clean"
-nix-shell --run "make"
-cd ..
+nix-build resume
 
 verifyChecksums
 echo "Copying resume into folder"
 outfile="resume-$(date "+%d-%b-%Y").pdf"
-cp resume/build/resume.pdf "static/resumes/$outfile"
-rm -f static/resume.pdf
-ln -s "resumes/$outfile" static/resume.pdf
+cp result/share/resume.pdf "static/resumes/$outfile"
+ln -sf "resumes/$outfile" static/resume.pdf

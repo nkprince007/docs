@@ -34,12 +34,12 @@ stdenv.mkDerivation {
     })
     glibcLocales
   ];
+
   src = ./.;
-  buildPhase = "make";
 
   meta = with lib;
     {
-      description = "Describe your document here";
+      description = "My resume";
       license = licenses.bsd3;
       platforms = platforms.linux;
     };
