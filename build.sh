@@ -22,7 +22,7 @@ function verifyChecksums {
 }
 
 echo "Building resume"
-nix-build resume
+nix-build .
 
 verifyChecksums
 echo "Copying resume into folder"
