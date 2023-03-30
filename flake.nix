@@ -37,14 +37,13 @@
             ;
         })
         glibcLocales
-        ghostscript
       ];
     in
     with pkgs;
     {
       devShells.${system}.default = pkgs.mkShell {
         shellHook = "echo Welcome to your nix flake powered shell environment with all your latex deps";
-        packages = buildInputs;
+        packages = buildInputs ++ [ ghostscript ];
       };
 
       packages.${system}.default = stdenv.mkDerivation {
