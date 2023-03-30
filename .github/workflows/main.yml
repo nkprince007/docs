@@ -18,6 +18,8 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
       - name: Build
         run: bash -x build.sh
+      - name: Compress
+        run: nix develop -c ./compress.sh
       - uses: amondnet/vercel-action@v20
         with:
           working-directory: ./static

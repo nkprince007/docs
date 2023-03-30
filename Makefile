@@ -44,15 +44,7 @@ $(DOCNAME).pdf: $(DOCNAME).tex
 	latexmk -pdf -pdflatex=$(PDFLATEX) -use-make $(DOCNAME).tex -outdir=./build
 
 watch: $(DOCNAME).tex clean
-	latexmk \
-		-pvc \
-		-view=pdf \
-		-synctex=1 \
-		-pdf \
-		-pdflatex=$(PDFLATEX) \
-		-use-make \
-		$(DOCNAME).tex \
-		-output-directory=./build
+	latexmk -pvc -view=pdf -synctex=1 -pdf -pdflatex=$(PDFLATEX) -use-make $(DOCNAME).tex -output-directory=./build
 
 clean:
 	latexmk -CA

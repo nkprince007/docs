@@ -37,6 +37,7 @@
             ;
         })
         glibcLocales
+        ghostscript
       ];
     in
     with pkgs;
