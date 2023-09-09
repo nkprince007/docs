@@ -34,6 +34,10 @@
 
             # build tools
             latexmk
+
+            # dev tools
+            chktex
+            latexindent
             ;
         })
         glibcLocales
