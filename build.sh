@@ -29,3 +29,4 @@ echo "Copying resume into folder"
 outfile="resume-$(date "+%d-%b-%Y").pdf"
 cp result/share/resume.pdf "static/resumes/$outfile"
 ln -sf "resumes/$outfile" static/resume.pdf
+chmod 644 static/resumes/*.pdf
