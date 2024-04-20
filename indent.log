@@ -1,0 +1,27 @@
+INFO:  latexindent version 3.16, 2022-03-13, a script to indent .tex files
+       latexindent lives here: /nix/store/vbmh85i5i00hnv5fwyl2w0kwzg5my04j-perl5.36.0-latexindent-3.16/bin/
+       Sat Apr 20 22:39:18 2024
+       Filename: _header.tex
+INFO:  Processing switches:
+       -w|--overwrite: Overwrite mode active, will make a back up of _header.tex first
+INFO:  Directory for backup files and indent.log: .
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from /nix/store/k2sw466fv50qays29hx564r04pqfbvad-texlive-latexindent-3.16/scripts/latexindent/defaultSettings.yaml
+INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
+       Home directory is /home/vscode (didn't find either indentconfig.yaml or .indentconfig.yaml)
+       To specify user settings you would put indentconfig.yaml here: /home/vscode/indentconfig.yaml
+       Alternatively, you can use the hidden file .indentconfig.yaml as: /home/vscode/.indentconfig.yaml
+INFO:  Backup procedure (-w flag active):
+       ./_header.bak0 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
+       copying _header.tex to ./_header.bak1
+       Backup file: ./_header.bak1
+       _header.tex will be overwritten after indentation
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Overwriting file _header.tex
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl

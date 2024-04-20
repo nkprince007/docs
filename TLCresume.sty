@@ -7,7 +7,7 @@
 
 \RequirePackage[T1]{fontenc} %  Font encoding https://texfaq.org/FAQ-why-inp-font
 \RequirePackage[default,semibold]{sourcesanspro}
-\RequirePackage[10pt]{moresize}
+\RequirePackage[11pt]{moresize}
 \usepackage{anyfontsize}
 \RequirePackage{csquotes}
 
@@ -37,7 +37,7 @@
 \RequirePackage[inline]{enumitem}
 \setlength{\tabcolsep}{0in}
 
-% SECTION FORMATTING 
+% SECTION FORMATTING
 \RequirePackage[nostruts]{titlesec}
 \titlespacing*{\section}{0em}{0.5em}{0em}
 \titleformat{\section}{\color{highlight} \scshape \raggedright \large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
@@ -56,10 +56,10 @@
 \setlist[itemize]{align=parleft,left=0pt..1em}
 \newenvironment{zitemize}{
 \begin{itemize} \itemsep 0pt \parskip 0pt \parsep 1pt}
-{\end{itemize}\vspace{-.5em}}
+{\end{itemize}\vspace{0em}}
 
 % NO PAGE NUMBER
-\pagenumbering{gobble}
+% \pagenumbering{gobble}
 
 % SUBFILES IMPORTING
 \RequirePackage{standalone}

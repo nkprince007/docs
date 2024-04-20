@@ -3,15 +3,16 @@
 
 %====================
 % File:         resume.tex
-% Editor:       https://github.com/TimmyChan 
+% Editor:       https://github.com/TimmyChan
 %               https://www.linkedin.com/in/timmy-l-chan/
 % Last Updated: Jan 7th, 2022
 % Notes:        All formatting is done in TLCresume.sty
-%               No need to touch that file. 
+%               No need to touch that file.
 %               All actual content is in the sections/ folder.
 %====================
 
 \usepackage{TLCresume}
+\usepackage{float}
 
 %====================
 % CONTACT INFORMATION
@@ -22,17 +23,27 @@
 \def\email{naveenkumarsangi@pm.me}
 \def\LinkedIn{naveenkumarsangi} % linkedin.com/in/______
 \def\github{nkprince007} % github username
-\def\role{MTS IV - DevOps Engineering & SRE} % JOB TITLE
+\def\role{MTS IV - DevOps Engineering \& SRE} % JOB TITLE
 
 \input{_header}
 \begin{document}
+\thispagestyle{firstpage}
+
 \input{sections/objective}
+
+\section{Credentials}
+% \input{sections/certifications}
+\input{sections/badges}
 
 \section{Skills}
 \input{sections/skills}
 
 \section{Experience}
 \input{sections/experience}
+
+\thispagestyle{default}
+\setlength{\headheight}{0.55in}
+\setlength{\headsep}{0pt}
 
 \section{Education}
 \input{sections/education}
@@ -42,9 +53,5 @@
 
 \section{Extra-Curricular Activities}
 \input{sections/activities}
-
-\section{Credentials}
-% \input{sections/certifications}
-\input{sections/badges}
 
 \end{document}

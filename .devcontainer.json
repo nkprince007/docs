@@ -13,7 +13,9 @@
 		"vscode": {
 			"extensions": [
 				"bbenoist.Nix",
-				"mathematic.vscode-latex"
+				"mathematic.vscode-latex",
+				"jnoortheen.nix-ide",
+				"B4dM4n.nixpkgs-fmt"
 			]
 		}
 	}

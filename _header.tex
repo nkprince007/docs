@@ -3,10 +3,12 @@
 %====================
 
 \RequirePackage{fancyhdr}
-\fancypagestyle{fancy}{
+
+% Define a custom page style for the first page
+\fancypagestyle{firstpage}{
 	\fancyhf{}
 	\lhead{
-		\phone \\ % PHONE    
+		\phone \\ % PHONE
 		\city \\ % city
 		\href{mailto:\email}{\email}} % EMAIL}
 	\chead{
@@ -22,7 +24,12 @@
 	\renewcommand{\headrule}{\hbox to\headwidth{%
 			\color{highlight}\leaders\hrule height \headrulewidth\hfill}}
 }
-\thispagestyle{fancy}
+
+% Define a default page style for other pages
+\fancypagestyle{default}{
+	\fancyhf{} % clear all header and footer fields
+	\renewcommand{\headrulewidth}{0pt}
+}
 
 \setlength{\headheight}{90pt}
 \setlength{\headsep}{2pt}
